@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Prallax Scroll</title>
+</head>
+
+<body>
+<header>
+    <a href="#" class="logo">PHASE</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Help</a></li>
+        
+    </ul>
+</header>
+    <section>
+        <img src="pic/trees.jpg" id="main" alt="">
+        <h2 id="text">Create Together</h2>
+        
+        <a href="#" id="btn">Learn More</a>
+        <img src="pic/moon.png" id="moon"alt=""> 
+    </section>
+    <div class="content">
+        <h2>Demo Website </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odit vero aspernatur magnam quis distinctio ad iure, id incidunt, eum voluptatem at eveniet quasi repellendus! Tenetur rem tempore non ipsum.
+        Sequi corporis repudiandae sit, sint, quisquam cupiditate id nam corrupti tempora veniam iusto molestiae amet odio quae beatae consectetur commodi officiis ullam consequatur. Minus nam ad, iure error nobis vel.<br>
+       <br> Ipsum consequuntur asperiores id officiis voluptates corporis, rem quisquam quibusdam repellendus. Aliquid dignissimos sapiente repellat ad, ut voluptate illo assumenda repudiandae est sed debitis nulla temporibus doloremque? Dolore, ipsum vitae?
+        Explicabo cum dolores velit perferendis ducimus officiis, ratione sunt, corrupti distinctio labore deserunt voluptates saepe nihil maxime dolorem placeat, sint nam sit commodi. <br> <br>Nemo similique officiis libero. Iusto, est dolores!
+        Ullam nisi dolorem cupiditate iste iure error nesciunt atque alias pariatur et quasi, inventore corrupti nobis laborum est nostrum temporibus ad, ipsa asperiores. Temporibus quidem officia rerum voluptatum odit minus!</p>
+    </div>
+
+    <script>
+        let moon = document.getElementById('moon')
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            moon.style.top=value*0.75 +'px';
+            text.style.paddingLeft = value * 10 + 'px';
+        })
+
+        
+    </script>
+</body>
+</html>
