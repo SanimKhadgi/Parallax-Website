@@ -7,10 +7,13 @@
 
 }
 
+
 body{
     min-height: 100vh;
-    background:linear-gradient(rgb(40, 16, 60),rgb(107, 67, 182)) ;
+    background: linear-gradient(111.3deg, rgb(74, 105, 187) 9.6%, rgb(205, 77, 204) 93.6%);
+    overflow-x: hidden;
 }
+
 
 header{
     position: absolute;
@@ -23,6 +26,29 @@ header{
     align-items: center;   
     z-index: 1000;
 }
+#text {
+    background-size: 200% 100%; background: radial-gradient(circle at 10% 20%, rgb(222, 168, 248) 0%, rgb(168, 222, 248) 21.8%, rgb(189, 250, 205) 35.6%, rgb(243, 250, 189) 52.9%, rgb(250, 227, 189) 66.8%, rgb(248, 172, 172) 90%, rgb(254, 211, 252) 99.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    
+}
+
+#Hello{
+    z-index: 1;
+    position: relative;
+    background-size: 200% 100%; background: radial-gradient(circle at 10% 20%, rgb(222, 168, 248) 0%, rgb(168, 222, 248) 21.8%, rgb(189, 250, 205) 35.6%, rgb(243, 250, 189) 52.9%, rgb(250, 227, 189) 66.8%, rgb(248, 172, 172) 90%, rgb(254, 211, 252) 99.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+}
+
+
 
 header .logo{
 
@@ -73,21 +99,14 @@ section img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0 0 50px 50px;
 }
 section img#moon{
     mix-blend-mode:screen;
     
     
 }
-#text{
-    position: absolute;
-    color: white;
-    white-space: nowrap;
-    font-size: 7.5vw;;
-    z-index: 9;
-    margin:0, 0, 0, 50px;
-  
-}
+
 #btn{
    
     text-decoration: none;
@@ -98,21 +117,133 @@ section img#moon{
     border-radius: 40px;
     background:white;
     color: rgb(49, 21, 75);
-    z-index: 0;
+    z-index: 1;
     transform: translateY(100px);
 }
 
+#btn:hover{
+    background-color: transparent;
+    border: 1px solid white;    
+    color: white;
+    transition: ease-in-out 0.5s;
+
+}
+
+
 .content{
+    align-items: center;
     position: relative;
+    margin-bottom: 30px;
 }
 .content h2{
     margin: 20px 20px 20px 10px;
     font-size: 3.5em;
-   
     color: white;
 }
 .content p{
-    color: white;
-    font-size: 1em;
     
+    color: white;
+    font-size: 24px;
+    padding: 20px 100px;
+    
+}
+
+.portfolio{
+ 
+   border-radius: 20px 0 0 20px; 
+    background: linear-gradient(274deg, rgba(110,98,192,1) 0%, rgba(184,82,202,1) 100%);
+    
+    
+}
+.portfolio h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    z-index: 1
+    
+}
+.portfolio h2 {
+    font-size: 32px;
+    position: relative;
+    color: white;
+    margin: 20px 20px 20px 10px;
+    display: inline-block;
+    z-index: 1;
+    
+}
+.portfolio h2:hover::after{
+    background-image:linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83)) ;
+    width: 100%;
+}
+
+.portfolio h3{
+    color: white;
+    padding: 20px 10px 20px 30px;
+}
+
+.portfolio p{
+    color: white;
+    padding: 10px 50px 20px;
+    margin-left: 20px;
+}
+
+.experiences h2{
+    font-size: 32px;
+    color: white;
+    position: relative;
+    margin: 20px 20px 20px 10px;
+    display: inline-block;
+    z-index: 1;
+    
+}
+.experiences{
+    background: linear-gradient(111.3deg, rgb(74, 105, 187) 9.6%, rgb(205, 77, 204) 93.6%);
+    border-radius:0 20px 20px 0;
+}
+
+.experiences h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    z-index: 1
+}
+
+.experiences h2:hover::after{
+    background-image:linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83)) ;
+    width: 100%;
+}
+.experiences h3{
+    padding: 20px 10px 20px 30px;
+    color: white;
+}
+.experiences p{
+    padding: 10px 50px 20px;
+    color:white;
+    margin-left: 20px;
+}
+
+@media (max-width:640px){
+    header ul{
+        flex-direction: column;
+    }
+
+    section img#moon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
 }
