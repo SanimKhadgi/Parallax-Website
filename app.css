@@ -47,9 +47,57 @@ header{
     
     
 }
-
-
-
+.marquee {
+    width: 100%;
+    padding: 90px 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .marquee h3 {
+    font-size: 42px;
+    font-weight: 2000;
+    text-transform: uppercase;
+  }
+  
+  .marquee-wrapper {
+    width: 100%;
+    display: flex;
+    animation: marqueeAnimation 30s linear infinite;
+    animation-fill-mode: forwards; 
+  }
+  
+  .marquee-wrapper .langmarquee {
+    width: max-content;
+    display: flex;
+  }
+  
+  .marquee-wrapper .langmarquee span {
+    margin-right: 50px;
+    white-space: nowrap;
+    
+  }
+  
+  .marquee-wrapper .langmarquee span:last-of-type {
+    margin-right: 0;
+    
+  }
+  
+  @keyframes marqueeAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .marquee-wrapper .langmarquee span.text-stroke-purple {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color:rgb(255, 255, 255);
+  }
 header .logo{
 
     color: white;
@@ -103,7 +151,6 @@ section img{
 }
 section img#moon{
     mix-blend-mode:screen;
-    
     
 }
 
