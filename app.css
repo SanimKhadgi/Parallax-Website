@@ -7,25 +7,25 @@
 
 }
 
+.example::-webkit-scrollbar {
+    display: none;}
+
 
 body{
     min-height: 100vh;
     background: linear-gradient(111.3deg, rgb(74, 105, 187) 9.6%, rgb(205, 77, 204) 93.6%);
     overflow-x: hidden;
+
 }
 
-
-header{
-    position: absolute;
-    top: 0;
-    left: 0 ;
-    width: 100%;
-    padding: 30px 100px;
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;   
-    z-index: 1000;
-}
+    align-items: center;
+    background: transparent;
+    padding: 20px;
+  }
+
 #text {
     background-size: 200% 100%; background: radial-gradient(circle at 10% 20%, rgb(222, 168, 248) 0%, rgb(168, 222, 248) 21.8%, rgb(189, 250, 205) 35.6%, rgb(243, 250, 189) 52.9%, rgb(250, 227, 189) 66.8%, rgb(248, 172, 172) 90%, rgb(254, 211, 252) 99.7%);
     -webkit-background-clip: text;
@@ -33,71 +33,12 @@ header{
     position: absolute;
     color: white;
     white-space: nowrap;
-    font-size: 7.5vw;
+    font-size: 12.5vw;
     z-index: 9;
-    
+   
 }
 
-#Hello{
-    z-index: 1;
-    position: relative;
-    background-size: 200% 100%; background: radial-gradient(circle at 10% 20%, rgb(222, 168, 248) 0%, rgb(168, 222, 248) 21.8%, rgb(189, 250, 205) 35.6%, rgb(243, 250, 189) 52.9%, rgb(250, 227, 189) 66.8%, rgb(248, 172, 172) 90%, rgb(254, 211, 252) 99.7%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    
-}
-.marquee {
-    width: 100%;
-    padding: 90px 20px;
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  .marquee h3 {
-    font-size: 42px;
-    font-weight: 2000;
-    text-transform: uppercase;
-  }
-  
-  .marquee-wrapper {
-    width: 100%;
-    display: flex;
-    animation: marqueeAnimation 30s linear infinite;
-    animation-fill-mode: forwards; 
-  }
-  
-  .marquee-wrapper .langmarquee {
-    width: max-content;
-    display: flex;
-  }
-  
-  .marquee-wrapper .langmarquee span {
-    margin-right: 50px;
-    white-space: nowrap;
-    
-  }
-  
-  .marquee-wrapper .langmarquee span:last-of-type {
-    margin-right: 0;
-    
-  }
-  
-  @keyframes marqueeAnimation {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .marquee-wrapper .langmarquee span.text-stroke-purple {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: transparent;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color:rgb(255, 255, 255);
-  }
+
 header .logo{
 
     color: white;
@@ -111,7 +52,9 @@ header .logo{
 header ul{
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;  
+    margin: 0; 
+    margin: 0;
 }
 
 header ul li{
@@ -130,6 +73,10 @@ header ul li a:hover , header ul li a.active
     background:#ffff;
     color: rgb(18, 4, 40);   
 }
+
+
+
+
 section{
     position: relative;
     width: 100%;
@@ -138,6 +85,7 @@ section{
     display: flex;
     justify-content: center;  
     align-items: center;
+   
 
 }
 section img{
@@ -148,6 +96,7 @@ section img{
     height: 100%;
     object-fit: cover;
     border-radius: 0 0 50px 50px;
+    
 }
 section img#moon{
     mix-blend-mode:screen;
@@ -175,17 +124,27 @@ section img#moon{
     transition: ease-in-out 0.5s;
 
 }
-
-
+#Hello{
+    z-index: 1;
+    position: relative;
+    background-size: 200% 100%; background: radial-gradient(circle at 10% 20%, rgb(222, 168, 248) 0%, rgb(168, 222, 248) 21.8%, rgb(189, 250, 205) 35.6%, rgb(243, 250, 189) 52.9%, rgb(250, 227, 189) 66.8%, rgb(248, 172, 172) 90%, rgb(254, 211, 252) 99.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:  15.5vw;
+    
+}
 .content{
+   
     align-items: center;
     position: relative;
     margin-bottom: 30px;
+   
 }
 .content h2{
     margin: 20px 20px 20px 10px;
     font-size: 3.5em;
     color: white;
+    
 }
 .content p{
     
@@ -196,9 +155,12 @@ section img#moon{
 }
 
 .portfolio{
- 
-   border-radius: 20px 0 0 20px; 
-    background: linear-gradient(274deg, rgba(110,98,192,1) 0%, rgba(184,82,202,1) 100%);
+  
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+   border-radius: 20px;
+   
+   background:  linear-gradient(109.6deg, rgb(123, 41, 182) 3.6%, rgb(77, 58, 151) 51%, rgb(103, 55, 115) 92.9%);
     
     
 }
@@ -209,7 +171,6 @@ section img#moon{
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: black;
     transition: 0.3s ease-in-out;
     z-index: 1
     
@@ -217,40 +178,59 @@ section img#moon{
 .portfolio h2 {
     font-size: 32px;
     position: relative;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 20px 20px 20px 10px;
     display: inline-block;
     z-index: 1;
-    
+    margin: 20px;
+   
 }
+.portfolio{
+    background:  linear-gradient(109.6deg, rgb(123, 41, 182) 3.6%, rgb(77, 58, 151) 51%, rgb(103, 55, 115) 92.9%); background:  linear-gradient(109.6deg, rgb(123, 41, 182) 3.6%, rgb(77, 58, 151) 51%, rgb(103, 55, 115) 92.9%);
+    padding: 20px;
+    margin: 20px;
+}
+
+
+
 .portfolio h2:hover::after{
-    background-image:linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83)) ;
+    background:white;
     width: 100%;
 }
 
 .portfolio h3{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px 10px 20px 30px;
+    margin-left: 20px;
+    
+    
 }
 
 .portfolio p{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 50px 20px;
-    margin-left: 20px;
+    margin-left: 30px;
+    line-height: 1.5em;
+    
+}
+.experiences{
+    border-top:  2px solid  white;
+    box-sizing: border-box;
+    margin: 20px;
+    
 }
 
+.experiences h2 h3 p{
+    box-sizing: border-box;
+}
 .experiences h2{
     font-size: 32px;
     color: white;
     position: relative;
-    margin: 20px 20px 20px 10px;
+    margin: 20px 20px 20px 0px;
     display: inline-block;
     z-index: 1;
     
-}
-.experiences{
-    background: linear-gradient(111.3deg, rgb(74, 105, 187) 9.6%, rgb(205, 77, 204) 93.6%);
-    border-radius:0 20px 20px 0;
 }
 
 .experiences h2::after {
@@ -266,7 +246,7 @@ section img#moon{
 }
 
 .experiences h2:hover::after{
-    background-image:linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83)) ;
+    background:white;
     width: 100%;
 }
 .experiences h3{
@@ -279,18 +259,109 @@ section img#moon{
     margin-left: 20px;
 }
 
-@media (max-width:640px){
-    header ul{
+@media (max-width:767px){
+    header {
         flex-direction: column;
-    }
+        justify-content: center;
+        align-items: stretch;
+      }
+    
+      header .logo{
+        margin-bottom: 20px;
+      }
+    
+      header ul {
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items:stretch;
+        margin-left: 200px;
+        margin-top: -60px;
+     
+      }
+    
+      header ul li {
 
-    section img#moon{
+        margin: 10px 20px ;
+        text-align: center;
+        padding: 5px;
+      }
+
+      section img#moon{
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 50%;
+        top: 60px;
+        margin: 50px;
+        width: 75%;
+        height: 75%;
+        padding:0 60px 20px;
         object-fit: cover;
+     
     }
 
-}
+    }
+    #btn{
+        margin-top: 60px;
+        width: auto;
+        padding: 15px;
+    }
+
+ 
+    .content p{
+        font-size: 20px;
+        padding: 20px;
+    }
+
+
+
+    .marquee {
+        width: 100%;
+        padding: 90px 20px;
+        text-align: center;
+        overflow: hidden;
+      }
+      
+      .marquee h3 {
+        font-size: 42px;
+        font-weight: 2000;
+        text-transform: uppercase;
+      }
+      
+      .marquee-wrapper {
+        width: 100%;
+        display: flex;
+        animation: marqueeAnimation 30s linear infinite;
+      }
+      
+      .marquee-wrapper .langmarquee {
+        width: max-content;
+        display: flex;
+      }
+      
+      .marquee-wrapper .langmarquee span {
+        margin-right: 50px;
+        white-space: nowrap;
+      }
+      
+      .marquee-wrapper .langmarquee span:last-of-type {
+        margin-right: 0;
+      }
+      
+      .langmarquee {
+          animation: marquee 40s linear infinite;
+      }  
+      @keyframes marqueeAnimation {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+        
+        .marquee-wrapper .langmarquee span.text-stroke-purple {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: transparent;
+          -webkit-text-stroke: 1px;
+          -webkit-text-stroke-color:rgb(255, 255, 255);
+        } 
+      
